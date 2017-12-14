@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.david.project6.loggedActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/TitleTXT"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:text="GUES THE COUNTRY CODE AND CAPITAL"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.456"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.015" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="450sp"
+            android:layout_weight="1"
+            tools:layout_editor_absoluteX="42dp"
+            tools:layout_editor_absoluteY="34dp">
+
+            <Button
+                android:id="@+id/compareBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:onClick="compare"
+                android:text="compare"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/capitalED"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="capital"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentTXT" />
+
+            <Button
+                android:id="@+id/capitalBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:onClick="capital_gues"
+                android:text="GUES CAPITAL"
+                app:layout_constraintBottom_toBottomOf="@+id/capitalED"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/capitalED"
+                app:layout_constraintTop_toTopOf="@+id/capitalED" />
+
+            <EditText
+                android:id="@+id/countryED"
+                android:layout_width="220dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="40dp"
+                android:ems="10"
+                android:hint="country"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currentTXT" />
+
+            <Button
+                android:id="@+id/countryBTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="8dp"
+                android:onClick="country_gues"
+                android:text="GUES COUNTRY"
+                app:layout_constraintBottom_toBottomOf="@+id/capitalBTN"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/capitalBTN"
+                app:layout_constraintTop_toTopOf="@+id/capitalBTN" />
+
+            <TextView
+                android:id="@+id/exampleTXT"
+                android:layout_width="368dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:text="Example BD (for Bangladesh)"
+                android:textAlignment="center"
+                android:textStyle="italic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/TitleTXT" />
+
+            <TextView
+                android:id="@+id/currentTXT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="go GUES!"
+                android:textColor="@color/common_google_signin_btn_text_dark_focused"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/exampleTXT" />
+
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
