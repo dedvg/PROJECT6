@@ -34,7 +34,7 @@ The user can compare his points and guessed countries with other users if he kno
 
 ![image6](doc/image%20(6).jpeg)
 
-![image7](doc/image%20(7).JPEG)
+![image7](doc/image%20(7).jpeg)
 
 
 
