@@ -54,7 +54,6 @@ public class CompareActivity extends AppCompatActivity {
                     public void onCancelled(DatabaseError databaseError) {
                     }
                 });
-
     }
 
     public void go_back(View view) {

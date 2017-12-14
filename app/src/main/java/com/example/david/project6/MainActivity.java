@@ -63,14 +63,12 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), "logging in again",
                             Toast.LENGTH_SHORT).show();
-
                     Intent intent = new Intent(MainActivity.this,
                             loggedActivity.class);
+
                     // starts the new activity
                     startActivity(intent);
                     finish();
-
-
                 }
             }
         };

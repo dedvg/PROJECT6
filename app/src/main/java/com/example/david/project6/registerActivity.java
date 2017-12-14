@@ -41,6 +41,7 @@ public class registerActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
     }
 
+    // creates user and checks if it is succesfull in the onComplete
     public void create_user(final String email, String password) {
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -48,7 +49,6 @@ public class registerActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
 
-                            // if loging in is succesfull
                             // toast it, add user to firebase and go to the next activity
                             Toast.makeText(registerActivity.this,
                                     "Authentication succes.", Toast.LENGTH_SHORT).show();
@@ -79,10 +79,10 @@ public class registerActivity extends AppCompatActivity {
         finish();
     }
 
+    // checks if both fields are filled in correct, if correct it creates the user
     public void register(View view) {
         email = userT.getText().toString();
         password = passwordT.getText().toString();
-
         if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             if (password.length() >6 ){
                 create_user(email,password);

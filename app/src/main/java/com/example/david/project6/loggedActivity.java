@@ -75,9 +75,7 @@ public class loggedActivity extends AppCompatActivity {
 
         // Initialize a new JsonObjectRequest instance
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
-                Request.Method.GET,
-                mJSONURLString,
-                null,
+                Request.Method.GET, mJSONURLString, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
