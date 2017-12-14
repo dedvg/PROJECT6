@@ -50,8 +50,8 @@ public class loggedActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged);
-        countryEd = (EditText) findViewById(R.id.countryED);
-        capitalEd = (EditText) findViewById(R.id.capitalED);
+        countryEd = findViewById(R.id.countryED);
+        capitalEd = findViewById(R.id.capitalED);
         gues_count_btn = findViewById(R.id.countryBTN);
         gues_capt_btn = findViewById(R.id.capitalBTN);
         TitleTXT = findViewById(R.id.TitleTXT);

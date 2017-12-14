@@ -9,25 +9,19 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    private DatabaseReference mDatabase =  FirebaseDatabase.getInstance().getReference();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         // set a listener that checks if the user is already logged in
         setListener();
-
     }
 
     // goes to the next intent
@@ -35,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, registerActivity.class);
         // starts the new activity
         startActivity(intent);
-
     }
     @Override
     public void onStart() {

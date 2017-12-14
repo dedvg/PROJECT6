@@ -67,9 +67,7 @@ public class registerActivity extends AppCompatActivity {
     public void add_user_firebase(){
         FirebaseUser user = mAuth.getCurrentUser();
         String Uid = user.getUid();
-        List<String> countries = new ArrayList<String>();
-        countries.add("FREE POINT");
-        mDatabase.child("users").child(Uid).setValue(new UserClass(email, 1, countries));
+        mDatabase.child("users").child(Uid).setValue(new UserClass(email, 1, null));
     }
     private void logged_in() {
         Intent intent = new Intent(this, loggedActivity.class);

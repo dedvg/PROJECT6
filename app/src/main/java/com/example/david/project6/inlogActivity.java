@@ -5,9 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
@@ -16,7 +14,6 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import static android.content.ContentValues.TAG;
 
 
 
@@ -82,18 +79,17 @@ public class inlogActivity extends AppCompatActivity {
         if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             if (password.length() >5 ){
                 login_user(email,password);
-
             }
             else{
-                passwordT.setHint("needs at least 6 characters");
-                passwordT.setText("");
+                Toast.makeText(inlogActivity.this,
+                        "password needs at least 6 characters", Toast.LENGTH_SHORT).show();
             }
         }
         else{
             userT.setHint("fill in a valid email");
-            userT.setText("");
+            Toast.makeText(inlogActivity.this,
+                    "please fill in a valid email", Toast.LENGTH_SHORT).show();
         }
-
     }
 }
 

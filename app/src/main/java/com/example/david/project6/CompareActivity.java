@@ -8,12 +8,10 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,7 +65,9 @@ public class CompareActivity extends AppCompatActivity {
 
     public void check_score(View view) {
         email = user_ed.getText().toString();
-        if (email.length() > 3){
+
+        // make sure the length is at least 5
+        if (email.length() > 5){
             getScore();
         }
     }
