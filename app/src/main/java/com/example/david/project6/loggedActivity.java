@@ -1,9 +1,15 @@
+/*
+This Activity asks for a matching countrycode and capital.
+If these match the user gets a point.
+
+It also allows the user to logout and go to the activity to compare users.
+ */
+
 package com.example.david.project6;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;

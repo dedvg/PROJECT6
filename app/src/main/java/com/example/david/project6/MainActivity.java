@@ -1,3 +1,9 @@
+/*
+This activity checks if the user is already logged in if so it goes to loggedActiviy.
+If not the user will be redirected to the loginActivity or registerActivity depending on the
+users choice.
+ */
+
 package com.example.david.project6;
 
 import android.content.Intent;
@@ -6,7 +12,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
-
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 

@@ -1,3 +1,9 @@
+/*
+This Activity allows the user to search a users score and countries.
+It returns a list with countries that where guessed correctly and the score.
+ */
+
+
 package com.example.david.project6;
 
 import android.content.Intent;
@@ -14,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
+
+
 
 public class CompareActivity extends AppCompatActivity {
     TextView score_v;

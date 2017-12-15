@@ -1,5 +1,7 @@
+/*
+This allows the user to register in Firebase.
+ */
 package com.example.david.project6;
-
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,8 +19,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import java.util.ArrayList;
-import java.util.List;
 
 
 public class registerActivity extends AppCompatActivity {

@@ -2,10 +2,6 @@ package com.example.david.project6;
 
 import java.util.List;
 
-/**
- * Created by dedvg on 12-12-2017.
- */
-
 public class UserClass {
     public List<String> Countries;
     public int Score;
